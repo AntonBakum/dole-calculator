@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dole calculator</title>
+  </head>
+  <body class="space-y-4 w-screen h-svh flex justify-center items-center bg-gray-200">
+    <form id="form" class="flex flex-col gap-4 justify-center items-center">
+      <div class="h-10">
+        <label for="myPart" class="bg-blue-300 p-2 rounded h-full">Я наїв на:</label>
+        <input name="myPart" id="myPart" type="number" class="bg-yellow-100 rounded h-full" />
+      </div>
+      <div class="h-10">
+        <label for="total" class="bg-blue-300 p-2 rounded h-full">Сумма чеку:</label>
+        <input name="total" id="total" type="number" class="bg-yellow-100 rounded h-full" />
+      </div>
+      <div class="h-10">
+        <label for="tip" class="bg-blue-300 p-2 rounded h-full">Тіп</label>
+        <input name="tip" id="tip" type="number" class="bg-yellow-100 rounded h-full" />
+      </div>
+      <button class="w-32 bg-blue-500 p-4 rounded w-max">Калькулювати</button>
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
