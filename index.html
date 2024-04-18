@@ -7,36 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Dole calculator</title>
   </head>
-  <body>
-    <div class="w-screen h-svh flex items-center">
-      <div class="hidden w-full" id="new">
-        <form id="newForm" class="w-full px-6 flex flex-col gap-4">
-          <label class="w-full flex flex-col gap-2">
-            Name:
-            <input name="name" class="h-8 border-black border-2 border-solid rounded px-4 text-md" />
-          </label>
-          <label class="w-full flex flex-col gap-2">
-            Total:
-            <input name="totalSum" class="h-8 border-black border-2 border-solid rounded px-4 text-md" />
-          </label>
-          <label class="w-full flex flex-col gap-2">
-            Tip:
-            <input name="tip" pattern="\d+" class="h-8 border-black border-2 border-solid rounded px-4 text-md" />
-          </label>
-          <button class="p-4 bg-blue-100">create</button>
-        </form>
+  <body class="space-y-4 w-screen h-svh flex justify-center items-center flex-col bg-gray-200">
+    <form id="form" class="flex flex-col gap-4 justify-center items-center">
+      <div class="h-10">
+        <label for="myPart" class="bg-blue-300 p-2 rounded h-full">Я наїв на:</label>
+        <input name="myPart" id="myPart" type="number" class="bg-yellow-100 rounded h-full" />
       </div>
-      <div class="hidden w-full h-svh overflow-auto flex pt-5" id="check">
-        <form id="checkForm" class="flex flex-col gap-4 w-full px-6">
-          <input name="0" class="h-8 border-black border-2 border-solid rounded px-4 text-md" />
-          <button type="button" id="addNewItem">+</button>
-          <button>calculate</button>
-          <div class="flex gap-2">
-            <div>Result:</div>
-            <div id="result">0</div>
-          </div>
-        </form>
+      <div class="h-10">
+        <label for="total" class="bg-blue-300 p-2 rounded h-full">Сумма чеку:</label>
+        <input name="total" id="total" type="number" class="bg-yellow-100 rounded h-full" />
       </div>
-    </div>
+      <div class="h-10">
+        <label for="tip" class="bg-blue-300 p-2 rounded h-full">Тіп</label>
+        <input name="tip" id="tip" type="number" class="bg-yellow-100 rounded h-full" />
+      </div>
+      <button class="w-32 bg-blue-500 p-4 rounded w-max">Калькулювати</button>
+    </form>
+    <div id="result"></div>
   </body>
 </html>
